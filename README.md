@@ -31,3 +31,16 @@
 - NPM: Node Package Manager.
 - Utiliza o node.js.
 - Permite a configuração rápida e fácil de ambientes e plugins Node.
+
+## Instalando o Gulp
+- Rodar o Node.js
+- Instalar o gulp-cli (Command Line Interface) globalmente: npm install gulp-cli -g
+- Agora na pasta do projeto, adicionar o npm: npm init -y
+- Criar o gulpfile.js
+
+## Trabalhando com Gulp
+- Baseado em funções: tasks
+- Organização do projeto
+- Otimização de arquivos
+- Mesclagem e Minificação de CSS e JS
+- Diminuição do tamanho (bytes) de imagens
