@@ -1,24 +1,26 @@
 {
   "name": "gulp",
   "version": "1.0.0",
-  "description": "",
+  "description": "- Otimizar o fluxo de trabalho.\r - Organizar e orquestrar arquivos.\r - Ajuda a evitar trabalhos lentos e repetitivos.\r - Criar pipelines.\r - Você cria as configurações necessárias.\r - Tarefas escritas em JS ou plugins.\r - Aplica as transformaçoes em arquivos ainda na memória (antes de gravar no disco).",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Letícia Silva",
+  "author": "Letícia Santos",
   "license": "ISC",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.4.0",
+    "bootstrap": "^5.2.3",
+    "jquery": "^3.6.4"
+  },
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-cssmin": "^0.2.0",
     "gulp-image": "^6.3.1",
+    "gulp-imagemin": "^7.1.0",
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2"
-  },
-  "dependencies": {
-    "bootstrap": "^5.2.3",
-    "jquery": "^3.6.4"
   }
 }

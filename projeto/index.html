@@ -5,15 +5,21 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="./dist/css/libs.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <!-- <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./vendor/owl/css/owl.css">
+    <link rel="stylesheet" href="./node_modules/@fortawesome/fontawesome-free/css/fontawesome.css">
+    <link rel="stylesheet" href="./vendor/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="./css/style.css"> -->
+
+    <link rel="stylesheet" href="./dist/css/styles.min.css">
+    
 
     <title>LetriKsS - Loja especializada</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="#"><img src="assets/images/logo.png" alt=""></a>
+            <a class="navbar-brand" href="#"><img src="dist/images/logo.png" alt=""></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -25,13 +31,13 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="products.html">Produtos</a>
+                        <a class="nav-link" href="#produto">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-modal-open" href="about.html" rel="sobre">Sobre nós</a>
+                        <a class="nav-link nav-modal-open" href="#sobre" rel="sobre">Sobre nós</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link nav-modal-open" href="contact.html" rel="contato">Contato</a>
+                        <a class="nav-link nav-modal-open" href="#contato" rel="contato">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -45,7 +51,7 @@
                     <div class="caption">
                         <h2>Novos produtos</h2>
                         <div class="line-dec"></div>
-                        <p>Venha conhecer meus produtos</p>
+                        <p>Venha conhecer nossos produtos</p>
                     </div>
                 </div>
             </div>
@@ -61,83 +67,66 @@
                         <h1>Destaques</h1>
                     </div>
                 </div>
-                <div class="col-md-12">
+
+                <div id="produto" class="col-md-12">
                     <div class="owl-carousel owl-theme">
                         <div class="featured-item">
-                            <img src="assets/images/item-01.jpg" alt="Item 1">
-                            <h4>Calça Jeans - Azul Claro</h4>
-                            <h6>R$ 65,00</h6>
-                            <a href="single-product.html">
-                                Comprar
-                            </a>
+                            <img src="dist/images/tshirt2.jpg" alt="Item 1" height="358.69">
+                            <h4>Camiseta - Azul Claro</h4>
+                            <h6>R$ 90,00</h6>
+                            <button type="button" class="btn btn-dark">Comprar</button>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/item-02.jpg" alt="Item 2">
+                            <img src="dist/images/item-02.jpg" alt="Item 2">
                             <h4>Calça Jeans - Azul Escuro</h4>
                             <h6>R$ 67,00</h6>
-                            <a href="single-product.html">
-                                Comprar
-                            </a>
+                            <button type="button" class="btn btn-dark">Comprar</button>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/item-03.jpg" alt="Item 3">
+                            <img src="dist/images/item-03.jpg" alt="Item 3">
                             <h4>Jaqueta</h4>
                             <h6>R$ 80,00</h6>
-                            <a href="single-product.html">
-                                Comprar
-                            </a>
+                            <button type="button" class="btn btn-dark">Comprar</button>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/item-04.jpg" alt="Item 4">
+                            <img src="dist/images/item-04.jpg" alt="Item 4">
                             <h4>Bolsa de lado - Verde bebê</h4>
                             <h6>R$ 50,00</h6>
-                            <a href="single-product.html">
-                                Comprar
-                            </a>
+                            <button type="button" class="btn btn-dark">Comprar</button>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/item-05.jpg" alt="Item 5">
-                            <h4>Bolsa de lado - Rosa bebê</h4>
-                            <h6>R$ 40,00</h6>
-                            <a href="single-product.html">
-                                Comprar
-                            </a>
+                            <img src="dist/images/product-bag3.jpg" alt="Item 5" height="358.69">
+                            <h4>Bolsa - Vermelho</h4>
+                            <h6>R$ 120,00</h6>
+                            <button type="button" class="btn btn-dark">Comprar</button>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/item-06.jpg" alt="Item 6">
-                            <h4>Tênis AllStar (número 36)</h4>
+                            <img src="dist/images/product-hoodie1.jpg" alt="Item 6" height="358.69">
+                            <h4>Moletom - Preto</h4>
+                            <h6>R$ 100,00</h6>
+                            <button type="button" class="btn btn-dark">Comprar</button>
+                        </div>
+                        <div class="featured-item">
+                            <img src="dist/images/sports-shoe2.jpg" alt="Item 7" height="358.69">
+                            <h4>Tênis DNK - Azul/Rosa</h4>
+                            <h6>R$ 85,00</h6>
+                            <button type="button" class="btn btn-dark">Comprar</button>
+                        </div>
+                        <div class="featured-item">
+                            <img src="dist/images/item-06.jpg" alt="Item 8">
+                            <h4>Tênis AllStar</h4>
                             <h6>R$ 70,00</h6>
-                            <a href="single-product.html">
-                                Comprar
-                            </a>
+                            <button type="button" class="btn btn-dark">Comprar</button>
                         </div>
                         <div class="featured-item">
-                            <img src="assets/images/item-04.jpg" alt="Item 7">
-                            <h4>Bolsa de lado - Verde bebê</h4>
-                            <h6>R$ 50,00</h6>
-                            <a href="single-product.html">
-                                Comprar
-                            </a>
-                        </div>
-                        <div class="featured-item">
-                            <img src="assets/images/item-05.jpg" alt="Item 8">
-                            <h4>Bolsa de lado - Rosa bebê</h4>
-                            <h6>R$ 40,00</h6>
-                            <a href="single-product.html">
-                                Comprar
-                            </a>
-                        </div>
-                        <div class="featured-item">
-                            <img src="assets/images/item-06.jpg" alt="Item 9">
-                            <h4>Tênis AllStar (número 39)</h4>
-                            <h6>R$ 70,00</h6>
-                            <a href="single-product.html">
-                                Comprar
-                            </a>
+                            <img src="dist/images/item-01.jpg" alt="Item 9">
+                            <h4>Calça Jeans - Azul Claro</h4>
+                            <h6>R$ 65,00</h6>
+                            <button type="button" class="btn btn-dark">Comprar</button>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div> <!-- end .row -->
         </div>
     </div>
 
@@ -180,34 +169,25 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="logo">
-                        <img src="assets/images/logo.png" alt="">
+                        <img src="dist/images/logo.png" alt="">
                     </div>
                 </div>
+                
                 <div class="col-md-12">
                     <div class="footer-menu">
                         <ul>
                             <li><a href="#">Home</a></li>
-                            <li><a href="#">Ajuda</a></li>
-                            <li><a href="#">Política de Privacidade</a></li>
-                            <li><a href="#">Como funciona?</a></li>
-                            <li><a href="#">Contato</a></li>
+                            <li><a class="nav-link nav-modal-open" href="#sobre" rel="sobre">Sobre nós</a></li>
+                            <li><a class="nav-link nav-modal-open" href="#politica-privacidade" rel="politica-privacidade">Política de Privacidade</a></li>
+                            <li><a class="nav-link nav-modal-open" href="#como-funciona" rel="como-funciona">Como funciona?</a></li>
+                            <li><a class="nav-link nav-modal-open" href="#contato" rel="contato">Contato</a></li>
                         </ul>
                     </div>
                 </div>
-                <div class="col-md-12">
-                    <div class="social-icons">
-                        <ul>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+            </div> <!-- end .row -->
         </div>
     </div>
-    
+
     <!-- Modal -->
     <div class="modal fade" id="modalId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
         <div class="modal-dialog" role="document">
@@ -216,47 +196,91 @@
                     <h5 class="modal-title">Modal title</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
-                <div class="modal-body">
-                    <form action="post" class="form">
-
-                        <div class="mb-3">
-                          <label for="nome" class="form-label">Nome</label>
-                          <input type="text" name="nome" id="nome" title="Insira seu nome completo" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome">
-                          <small id="helpNome" class="text-muted">
-                              Digite um nome válido
-                          </small>
-                        </div>
-            
-                        <div class="mb-3">
-                            <label for="email" class="form-label">Email</label>
-                            <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu e-mail" aria-describedby="helpEmail" required>
-                            <small id="helpEmail" class="text-muted">
-                                Digite um e-mail válido
-                            </small>
-                        </div>
-            
-                        <div class="mb-3">
-                            <label for="cpf" class="form-label">CPF</label>
-                            <input type="text" name="cpf" id="cpf" class="form-control" placeholder="Digite seu cpf" aria-describedby="helpCPF">
-                            <small id="helpCPF" class="text-muted">
-                                Digite um CPF válido
-                            </small>
-                        </div>
-            
-                        <button type="submit" class="btn btn-primary">Enviar</button>
-            
-            
-                    </form>
+                <div class="modal-body">              
                 </div>
             </div>
         </div>
     </div>
 
+    <div id="contato" class="visually-hidden">
+        <form action="post" class="form">
+
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input type="text" name="nome" id="nome" title="Insira seu nome completo" class="form-control" placeholder="Digite seu nome" aria-describedby="helpNome">
+                <small id="helpNome" class="text-muted">Digite um nome válido</small>
+            </div>
+        
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Digite seu e-mail" aria-describedby="helpEmail">
+                <small id="helpEmail" class="text-muted">Digite um e-mail válido</small>
+            </div>
+        
+            <div class="mb-3">
+                <label for="telefone" class="form-label">Telefone</label>
+                <input type="text" name="telefone" id="telefone" class="form-control" placeholder="Digite seu telefone/celular" aria-describedby="helpTelefone">
+                <small id="helpTelefone" class="text-muted">Digite um Telefone válido</small>
+            </div>
+        
+            <button type="submit" class="btn btn-primary">Enviar</button>
+        
+        </form>
+
+        <div class="Whatsapp">
+            <p>Ou entre em contato por:
+            <a href="https://wa.me/5514971518691?text=Ol%C3%A1!%20Seja%20bem-vindo%20ao%20chat%20da%20LetriKsS!" target="_blank">Whatsapp</a></p>
+        </div>
+    </div>
+
     <div id="sobre" class="visually-hidden">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequatur explicabo eosdoloribus suscipit impedit nulla voluptates eius ad sint fugiat, atque corrupti, pariaturnobis dignissimos! Ut at tempore recusandae?</p>
+        <br>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequatur explicabo eosdoloribus suscipit impedit nulla voluptates eius ad sint fugiat, atque corrupti, pariaturnobis dignissimos! Ut at tempore recusandae?</p>
+    </div>
 
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequatur explicabo eos doloribus suscipit impedit nulla voluptates eius ad sint fugiat, atque corrupti, pariatur nobis dignissimos! Ut at tempore recusandae?</p>
-        <br><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, consequatur explicabo eos doloribus suscipit impedit nulla voluptates eius ad sint fugiat, atque corrupti, pariatur nobis dignissimos! Ut at tempore recusandae?</p>
+    <div id="como-funciona" class="visually-hidden">
+        <ol type="1">
+            <li>Você seleciona os produtos que queira comprar;</li>
+            <li>Vá até o carrinho e finalize sua compra;</li>
+            <li>Será pedido informações sobre contato, endereço residencial e pagamento;</li>
+            <li>Também será pedido informações de tamanho dos produtos selecionados;</li>
+            <li>Você receberá seu pedido em até 20 dias úteis.</li>
+        </ol>
 
+    </div>
+
+    <div id="politica-privacidade" class="visually-hidden">
+        <p style="text-align: justify;">A sua privacidade é importante para nós. É política da LetriKsS respeitar a sua privacidade em relação a qualquer informação sua que possamos coletar no site LetriKsS, e outros sites que possuímos e operamos.</p>
+        <br>
+        <p style="text-align: justify;">Solicitamos informações pessoais apenas quando realmente precisamos delas para lhe fornecer um serviço. Fazemo-lo por meios justos e legais, com o seu conhecimento e consentimento. Também informamos por que estamos coletando e como será usado.</p>
+        <br>
+        <p style="text-align: justify;">Apenas retemos as informações coletadas pelo tempo necessário para fornecer o serviço solicitado. Quando armazenamos dados, protegemos dentro de meios comercialmente aceitáveis ​para evitar perdas e roubos, bem como acesso, divulgação, cópia, uso ou modificação não autorizados.</p>
+        <br>
+        <p style="text-align: justify;">Não compartilhamos informações de identificação pessoal publicamente ou com terceiros, exceto quando exigido por lei.</p>
+        <br>
+        <p style="text-align: justify;">O nosso site pode ter links para sites externos que não são operados por nós. Esteja ciente de que não temos controle sobre o conteúdo e práticas desses sites e não podemos aceitar responsabilidade por suas respectivas políticas de privacidade.</p>
+        <br>
+        <p style="text-align: justify;">Você é livre para recusar a nossa solicitação de informações pessoais, entendendo que talvez não possamos fornecer alguns dos serviços desejados.</p>
+        <br>
+        <p style="text-align: justify;">O uso continuado de nosso site será considerado como aceitação de nossas práticas em torno de privacidade e informações pessoais. Se você tiver alguma dúvida sobre como lidamos com dados do usuário e informações pessoais, entre em contacto connosco.</p>
+        <br>
+        <li style="text-align: justify;font-size: small;">O serviço Google AdSense que usamos para veicular publicidade usa um cookie DoubleClick para veicular anúncios mais relevantes em toda a Web e limitar o número de vezes que um determinado anúncio é exibido para você.</li>
+        <li style="text-align: justify;font-size: small;">Para mais informações sobre o Google AdSense, consulte as FAQs oficiais sobre privacidade do Google AdSense.</li>
+        <li style="text-align: justify;font-size: small;">Utilizamos anúncios para compensar os custos de funcionamento deste site e fornecer financiamento para futuros desenvolvimentos. Os cookies de publicidade comportamental usados ​​por este site foram projetados para garantir que você forneça os anúncios mais relevantes sempre que possível, rastreando anonimamente seus interesses e apresentando coisas semelhantes que possam ser do seu interesse.</li>
+        <li style="text-align: justify;font-size: small;">Vários parceiros anunciam em nosso nome e os cookies de rastreamento de afiliados simplesmente nos permitem ver se nossos clientes acessaram o site através de um dos sites de nossos parceiros, para que possamos creditá-los adequadamente e, quando aplicável, permitir que nossos parceiros afiliados ofereçam qualquer promoção que pode fornecê-lo para fazer uma compra.</li>
+        <br><br>
+        <h6>Compromisso do Usuário</h6>
+        <br>
+        <p style="text-align: justify;">O usuário se compromete a fazer uso adequado dos conteúdos e da informação que a LetriKsS oferece no site e com caráter enunciativo, mas não limitativo:</p>
+        <br>
+        <li style="text-align: justify;font-size: small;">Não se envolver em atividades que sejam ilegais ou contrárias à boa fé a à ordem pública;</li>
+        <li style="text-align: justify;font-size: small;">Não difundir propaganda ou conteúdo de natureza racista, xenofóbica, betano apostas ou azar, qualquer tipo de pornografia, de apologia ao terrorismo ou contra os direitos humanos;</li>
+        <li style="text-align: justify;font-size: small;">Não causar danos aos sistemas físicos (hardwares) e lógicos (softwares) da LetriKsS, de seus fornecedores ou terceiros, para introduzir ou disseminar vírus informáticos ou quaisquer outros sistemas de hardware ou software que sejam capazes de causar danos anteriormente mencionados.</li>
+        <br>
+        <h6>Mais informações</h6>
+        <br>
+        <p style="text-align: justify;">Esperemos que esteja esclarecido e, como mencionado anteriormente, se houver algo que você não tem certeza se precisa ou não, geralmente é mais seguro deixar os cookies ativados, caso interaja com um dos recursos que você usa em nosso site.</p>
     </div>
     
     <div class="sub-footer">
@@ -272,13 +296,16 @@
     </div>
 
      <!-- Bibliotecas -->
-    <script src="./vendor/jquery/jquery-3.6.3.min.js"></script>
-    <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="./vendor/owl/dist/owl.carousel.min.js"></script>
-    <script src="./vendor/jquery-mask/jquery.mask.min.js"></script>
-    <!--<script src="./vendor/jquery-ui/jquery-ui.min.js"></script>-->
+    <!-- <script src="./node_modules/jquery/dist/jquery.js"></script>
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.js"></script>
+    <script src="./vendor/owl/dist/owl.carousel.js"></script>
+    <script src="./vendor/jquery-mask/jquery.mask.js"></script>
+    <script src="./vendor/jquery-ui/jquery-ui.js"></script> -->
 
     <!-- Script Customizado -->
-    <script src="./js/custom.js"></script>
+    <!-- <script src="./js/custom.js"></script> -->
+
+    <!-- Scripts Unidos e Minificados -->
+    <script src="./dist/js/scripts.min.js"></script>
 </body>
 </html>
