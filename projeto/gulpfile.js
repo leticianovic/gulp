@@ -8,6 +8,7 @@ const imagemin = require('gulp-imagemin')
 const stripJs = require('gulp-strip-comments')
 const stripCss = require('gulp-strip-css-comments')
 const htmlmin = require('gulp-htmlmin')
+const babel = require('gulp-babel')
 
 function tarefasCSS(callback){
     gulp.src([
@@ -17,6 +18,7 @@ function tarefasCSS(callback){
         './vendor/jquery-ui/jquery-ui.css',
         './src/css/style.css'
     ])
+        .pipe(stripCss()) // remover comentarios do css
         .pipe(concat('styles.css')) // mescla os arquivos
         .pipe(cssmin()) // minifica css
         .pipe(rename({suffix: '.min'})) // styles.min.css
@@ -34,8 +36,12 @@ function tarefasJS(callback){
         './vendor/jquery-ui/jquery-ui.js',
         './src/js/custom.js'
     ])
+        .pipe(babel({
+            comments: false,
+            presets: ['@babel/env']
+        }))
         .pipe(concat('scripts.js')) // mescla os arquivos
-        .pipe(uglify()) // minifica js
+        // .pipe(uglify()) // minifica js
         .pipe(rename({suffix: '.min'})) // scripts.min.js
         .pipe(gulp.dest('./dist/js')) // cria arquivo em novo diretorio
 

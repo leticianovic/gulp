@@ -71,3 +71,4 @@ v18.16.0
 - Rode novamente o `npm install` para reprocessar o package-lock.json e o node_modules
 - Rodar `npm cache clean --force` para limpar o cache
 - Rodar `git rm -r --cached dist` retirar do cache
+- Rodar http-server ./dist
