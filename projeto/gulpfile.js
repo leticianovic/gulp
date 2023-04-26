@@ -9,6 +9,8 @@ const stripJs = require('gulp-strip-comments')
 const stripCss = require('gulp-strip-css-comments')
 const htmlmin = require('gulp-htmlmin')
 const babel = require('gulp-babel')
+const browserSync = require('browser-sync').create()
+const reload = browserSync.reload
 
 function tarefasCSS(callback){
     gulp.src([
@@ -33,7 +35,7 @@ function tarefasJS(callback){
         './node_modules/bootstrap/dist/js/bootstrap.js',
         './vendor/owl/dist/owl.carousel.js',
         './vendor/jquery-mask/jquery.mask.js',
-        './vendor/jquery-ui/jquery-ui.js',
+        //'./vendor/jquery-ui/jquery-ui.js',
         './src/js/custom.js'
     ])
         .pipe(babel({
@@ -73,8 +75,21 @@ function tarefasHTML(callback){
     return callback()
 }
 
+gulp.task('serve', function(){
+    browserSync.init({
+        server: {
+            baseDir: "./dist"
+        }
+    })
+
+    gulp.watch('./src/**/*').on('change', process) // repete o processo quando alterar algo em src
+    gulp.watch('./dist/**/*').on('change', reload)
+})
+
+const process = series(tarefasHTML, tarefasJS, tarefasCSS)
+
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
 exports.images = tarefasImagem
 
-exports.default = parallel(tarefasHTML, tarefasJS, tarefasCSS)
+exports.default = process
