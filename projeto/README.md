@@ -73,7 +73,7 @@ v18.16.0
 - Rodar `git rm -r --cached dist` retirar do cache
 - Rodar o comando `gulp` para atualizar a pasta dist
 - `http-server ./dist` para rodar projeto no servidor do npm
-- `gulp serve` para reprocessar todas as alterações e abrir servidor local
+- `gulp serve` para reprocessar todas as alterações e abrir servidor local pelo gulp
 
 ## Series x Parallel
 - Series: Combina tarefas e as executa uma depois da outra, na ordem especificada.
