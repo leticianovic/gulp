@@ -1,0 +1,19 @@
+@import 'vars';
+
+.section-heading {
+	margin-top: 80px;
+	margin-bottom: 40px;
+
+	.line-dec {
+		width: 30px;
+		height: 5px;
+		background-color: $colorBackground;
+	}
+
+	h1 {
+		font-size: 22px;
+		font-weight: 700;
+		color: $color2;
+		margin-top: 15px;
+	}
+}

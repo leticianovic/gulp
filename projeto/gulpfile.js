@@ -10,44 +10,47 @@ const stripCss = require('gulp-strip-css-comments')
 const htmlmin = require('gulp-htmlmin')
 const babel = require('gulp-babel')
 const browserSync = require('browser-sync').create()
+const sass = require('gulp-sass')(require('node-sass'))
 const reload = browserSync.reload
 
-function tarefasCSS(callback){
+function tarefasCSS(cb){
     gulp.src([
         './node_modules/bootstrap/dist/css/bootstrap.css',
         './node_modules/@fortawesome/fontawesome-free/css/fontawesome.css',
         './vendor/owl/dist/assets/owl.carousel.css',
-        './vendor/jquery-ui/jquery-ui.css',
-        './src/css/style.css'
+        './vendor/jquery-ui/jquery-ui.css'
     ])
         .pipe(stripCss()) // remover comentarios do css
-        .pipe(concat('styles.css')) // mescla os arquivos
+        .pipe(concat('libs.css')) // mescla os arquivos
         .pipe(cssmin()) // minifica css
-        .pipe(rename({suffix: '.min'})) // styles.min.css
+        .pipe(rename({suffix: '.min'})) // libs.min.css
         .pipe(gulp.dest('./dist/css')) // cria arquivo em novo diretorio
 
-    return callback()
+    cb()
 }
 
-function tarefasJS(callback){
+function tarefasSASS(cb){
+    gulp.src('./src/scss/**/*.scss')
+        .pipe(sass()) // Transforma o sass para css
+        .pipe(gulp.dest('./dist/css'))
+
+    cb()
+}
+
+function tarefasJS(cb){
     gulp.src([
         './node_modules/jquery/dist/jquery.js',
         './node_modules/bootstrap/dist/js/bootstrap.js',
         './vendor/owl/dist/owl.carousel.js',
         './vendor/jquery-mask/jquery.mask.js',
-        //'./vendor/jquery-ui/jquery-ui.js',
         './src/js/custom.js'
     ])
-        .pipe(babel({
-            comments: false,
-            presets: ['@babel/env']
-        }))
+        .pipe(babel({comments: false, presets: ['@babel/env']}))
         .pipe(concat('scripts.js')) // mescla os arquivos
-        // .pipe(uglify()) // minifica js
         .pipe(rename({suffix: '.min'})) // scripts.min.js
         .pipe(gulp.dest('./dist/js')) // cria arquivo em novo diretorio
 
-    return callback()
+    cb()
 }
 
 function tarefasImagem(){
@@ -63,7 +66,7 @@ function tarefasImagem(){
             concurrent: 10,
             quiet: true
         }))
-    .pipe(gulp.dest('./dist/images'))
+        .pipe(gulp.dest('./dist/images'))
 }
 
 // POC - Proof of Concept
@@ -72,15 +75,11 @@ function tarefasHTML(cb){
         .pipe(htmlmin({collapseWhitespace: true}))
         .pipe(gulp.dest('./dist'))
 
-    return cb()
+    cb()
 }
 
 gulp.task('serve', function(){
-    browserSync.init({
-        server: {
-            baseDir: "./dist"
-        }
-    })
+    browserSync.init({server: {baseDir: "./dist"}})
 
     gulp.watch('./src/**/*').on('change', process) // repete o processo quando alterar algo em src
     gulp.watch('./dist/**/*').on('change', reload)
@@ -88,15 +87,15 @@ gulp.task('serve', function(){
 
 function end(cb){
     console.log("Tarefas concluídas!")
-    return cb()
+    
+    cb()
 }
 
-/* Series x Parallel */
-const process = series(tarefasHTML, tarefasJS, tarefasCSS, end)
-//const process = parallel(tarefasHTML, tarefasJS, tarefasCSS, end)
+const process = series(tarefasHTML, tarefasJS, tarefasCSS, tarefasSASS, end)
 
 exports.styles = tarefasCSS
 exports.scripts = tarefasJS
 exports.images = tarefasImagem
+exports.sass = tarefasSASS
 
 exports.default = process

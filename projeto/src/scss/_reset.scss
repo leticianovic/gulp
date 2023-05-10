@@ -1,0 +1,17 @@
+@import 'vars';
+
+body {
+	font-family: 'Roboto', sans-serif;
+	transition: $transition;
+}
+
+p {
+	margin-bottom: 0px;
+	font-size: 14px;
+	color: $color1;
+	line-height: 24px;
+}
+
+a {
+	text-decoration: $textDecoration!important;
+}
